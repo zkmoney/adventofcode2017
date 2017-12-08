@@ -1,26 +1,23 @@
-package main
+package advent
 
 import (
 	"fmt"
 	"math"
 )
 
-func main() {
-	// target := 325489
-	// count := 1
-	// for i := 0; ; i++ {
-	// 	perSide := i * 2
-	// 	count += (4 * perSide)
-	// 	fmt.Println(perSide, count)
-	// 	if count > target || i > 10 {
-	// 		fmt.Println("Found it", math.Sqrt(float64(count)))
-	// 		break
-	// 	}
-	// }
-	dayThree()
-}
+// target := 325489
+// count := 1
+// for i := 0; ; i++ {
+// 	perSide := i * 2
+// 	count += (4 * perSide)
+// 	fmt.Println(perSide, count)
+// 	if count > target || i > 10 {
+// 		fmt.Println("Found it", math.Sqrt(float64(count)))
+// 		break
+// 	}
+// }
 
-func dayThree() {
+func DayThree() {
 	target := 325489
 	sideLen := int(math.Floor(math.Sqrt(float64(target))))
 	if sideLen%2 == 0 {
