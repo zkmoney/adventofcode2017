@@ -23,6 +23,8 @@ func DayTen(part int) {
 	// lengths = []int{3, 4, 1, 5}
 	// listLen := 5
 
+	fmt.Println(lengths)
+
 	listLen := 256
 	list := make([]int, listLen)
 	for i := 0; i < listLen; i++ {
@@ -34,25 +36,19 @@ func DayTen(part int) {
 	for round := 0; round < numRounds; round++ {
 		for skipSize, length := range lengths {
 			swapElements(list, pos, length)
-			trueSkip := (round * len(lengths)) + skipSize
+			trueSkip := round*len(lengths) + skipSize
 			pos = (pos + length + trueSkip) % listLen
 		}
 	}
 
-	fmt.Println(list)
+	// fmt.Println(list)
 	if part == 1 {
 		fmt.Println(list[0], list[1], list[0]*list[1])
 	} else if part == 2 {
 		var final string
 		for i := 0; i < 16; i++ {
 			var val int
-			for j := 0; j < 16; j++ {
-				if j == 0 {
-					val = j
-					continue
-				}
-				val = val ^ list[i*16+j]
-			}
+			val = list[i*16+0] ^ list[i*16+1] ^ list[i*16+2] ^ list[i*16+3] ^ list[i*16+4] ^ list[i*16+5] ^ list[i*16+6] ^ list[i*16+7] ^ list[i*16+8] ^ list[i*16+9] ^ list[i*16+10] ^ list[i*16+11] ^ list[i*16+12] ^ list[i*16+13] ^ list[i*16+14] ^ list[i*16+15]
 			fmt.Printf("%d - %02x\n", val, val)
 			final = fmt.Sprintf("%s%02x", final, val)
 		}

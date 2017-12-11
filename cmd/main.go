@@ -1,6 +1,6 @@
 package main
 
-import advent "z/adventofcode"
+import advent "github.com/zkmoney/adventofcode"
 
 func main() {
 	// advent.DayOne()
@@ -13,4 +13,5 @@ func main() {
 	// advent.DayEight()
 	// advent.DayNine()
 	advent.DayTen(2)
+	// advent.DayEleven(1)
 }
