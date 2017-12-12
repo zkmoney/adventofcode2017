@@ -5,6 +5,7 @@ import (
 	"io/ioutil"
 	"net/http"
 	"strconv"
+	"strings"
 )
 
 const AdventURL = "http://adventofcode.com"
@@ -31,7 +32,7 @@ func getInput(day int) []byte {
 }
 
 func toInt(s string) int {
-	i, err := strconv.Atoi(s)
+	i, err := strconv.Atoi(strings.TrimSpace(s))
 	if err != nil {
 		panic(err)
 	}
