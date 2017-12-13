@@ -14,5 +14,6 @@ func main() {
 	// advent.DayNine()
 	// advent.DayTen(2)
 	// advent.DayEleven(1)
-	advent.DayTwelve(1)
+	// advent.DayTwelve(1)
+	advent.DayThirteen(1)
 }
